@@ -28,7 +28,7 @@ public class GraphQLFetcher {
       String name = environment.getArgument("name");
       String email = environment.getArgument("email");
       User user = EntityProducer.createUser(name, email);
-      userRepository.save(EntityProducer.createUser(name, email));
+      userRepository.save(user);
       return user;
     };
   }
